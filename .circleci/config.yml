@@ -50,6 +50,7 @@ jobs:
             . venv/bin/activate
             pip install coveralls
             coverage run --source='try/' manage.py test && coverage report
+            COVERALLS_REPO_TOKEN=ytXG1NPBJRLXmuqflqzhh6K4Td4aMge2y coveralls
 
       - store_artifacts:
           path: test-reports
